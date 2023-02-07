@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin-top: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Comfortaa', cursive;
+    background: linear-gradient(to right,#CE9461,#CABFAB,#FCFFE7);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color: rgb(25, 25, 25) ;
+    font-size: 75px;
+    
+}
+
+.subtitulo{
+    color: black;
+    font-size: 50px;
+    
+}
+
+.tarjetas,.tarjetas-ataques{
+    display: flex;
+    gap: 15px;
+}
+
+.tarjeta-de-mokepon{
+    color: black;
+    font-size: 20px;
+    width: 225px;
+    height: 160px;
+    background-color:#FCFFE7 ;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgb(53, 53, 53);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.tarjeta-de-mokepon:hover{
+    box-shadow: 5px 5px 20px rgb(10, 10, 10);
+
+}
+
+
+.tarjeta-de-mokepon img{
+    width: 85px;
+    
+}
+
+input{
+    display: none;
+}
+
+input:checked + label {
+    background-color:#CDFCF6;
+}
+
+input:checked + label{
+    border: 3px solid aqua;
+
+}
+
+#boton-mascota{
+    font-family: 'Comfortaa', cursive;
+    color: black;
+    width: 400px;
+    height: 50px;
+    border-color: transparent;
+    background-color: #FCFFE7;
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 20PX;
+    font-size: 17px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgb(53, 53, 53);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+#boton-mascota:hover{
+    box-shadow: 5px 5px 20px rgb(10, 10, 10); 
+
+}
+
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.boton-de-ataque{
+    font-family: 'Comfortaa', cursive;
+    width: 115px;
+    height: 50px;
+    font-size: 17px;
+    background-color: #FCFFE7;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    margin-right: 30px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgb(53, 53, 53);
+    cursor: default;
+    transition: all 400ms ease;
+    
+}
+
+.boton-de-ataque:hover{
+    box-shadow: 5px 5px 20px rgb(10, 10, 10); 
+    
+}
+
+
+
+
+
+#mensajes{
+    width: 300px;
+    background: #E4DCCF;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#boton-reiniciar{
+    font-family: 'Comfortaa', cursive;
+    background: #E4DCCF ;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    color: black;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgb(53, 53, 53);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+#boton-reiniciar:hover{
+    box-shadow: 5px 5px 20px rgb(10, 10, 10);
+
+}
+
+.ataques{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    background: #E4DCCF;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.ataque-jugador,.ataque-enemigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.piepagina{
+    padding: 1em 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#ver-mapa button{
+    font-family: 'Comfortaa', cursive;
+    width: 100px;
+    height: 50px;
+    font-size: 17px;
+    background-color: #FCFFE7;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    margin:10px 5px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgb(53, 53, 53);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+#ver-mapa button:hover{
+    box-shadow: 5px 5px 20px rgb(10, 10, 10); 
+
+}
+
+
+@media(max-width: 800px){
+    .titulo{
+        font-size: 50px;
+    }
+    .subtitulo{
+        font-size: 24px;
+    }
+    #boton-mascota{
+        width: 260px;
+    }
+    
+    
+    .tarjetas,.tarjetas-ataques{
+        flex-direction: column;
+    }
+    
+    
+}
+
+@media(max-width: 800px){
+    #ver-mapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
